@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data></data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/categoryTabs"
+            android:layout_width="match_parent"
+            app:tabIndicatorColor="@color/colorGreen"
+            android:layout_height="?attr/actionBarSize"></android.support.design.widget.TabLayout>
+
+        <Button
+            android:id="@+id/randomBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:text="Get Radnom Fact" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/factTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-thin"
+                android:padding="10dp"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+        </ScrollView>
+    </LinearLayout>
+</layout>

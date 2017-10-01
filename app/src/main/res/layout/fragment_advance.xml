@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data></data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/categoryTabs"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:tabIndicatorColor="@color/colorGreen"></android.support.design.widget.TabLayout>
+
+        <EditText
+            android:id="@+id/getNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/edit_bg"
+            android:gravity="center"
+            android:hint="Enter Number"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:padding="10dp" />
+
+        <LinearLayout
+            android:id="@+id/dateUI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/getMonth"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_bg"
+                android:gravity="center"
+                android:hint="MM"
+                android:inputType="number"
+                android:maxLength="2"
+                android:nextFocusDown="@+id/getYear"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/getDate"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_bg"
+                android:gravity="center"
+                android:hint="DD"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="2"
+                android:padding="10dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/getFact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:text="Get Fact" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/factTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-thin"
+                android:padding="10dp"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+        </ScrollView>
+    </LinearLayout>
+</layout>
